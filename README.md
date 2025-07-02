@@ -29,9 +29,12 @@ Note: V2 can be installed with `make deploy-local`, or installing the certificat
 
 - `kubectl create ns perses-operator-system`
 - `./scripts/gen-certs.sh`
-- ```kubectl -n perses-operator-system create secret tls perses-operator-webhook-server-cert \
+- Create certs: 
+```
+kubectl -n perses-operator-system create secret tls perses-operator-webhook-server-cert \
      --cert=/tmp/k8s-webhook-server/serving-certs/tls.crt \
-     --key=/tmp/k8s-webhook-server/serving-certs/tls.key```
+     --key=/tmp/k8s-webhook-server/serving-certs/tls.key
+```
 - `make deploy`  
 
 ### 2. Create the `istio` namespace

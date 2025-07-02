@@ -15,7 +15,7 @@ This repository contains ready-to-use dashboards for [Perses](https://perses.dev
 
 You can install the Perses Operator following the official documentation, for example:
 
-- Clone the [perses operator repository](https://github.com/perses/perses-operator). Note: Tested with release/v01, v2 was not working properly
+- Clone the [perses operator repository](https://github.com/perses/perses-operator). Note: Tested with release/v0.1, v2 was not working properly
 - `make deploy`
 - `make install`
 

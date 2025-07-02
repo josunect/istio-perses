@@ -25,6 +25,8 @@ For troubleshootint:
 - Verify that the pods are ready in the `perses-operator-system` namespace
 - View manager pod logs 
 
+#### Note about version 2
+
 Note: V2 can be installed with `make deploy-local`, or installing the certificates first, but still, the resources are not created. Should be done with these steps: 
 
 - `kubectl create ns perses-operator-system`
@@ -35,7 +37,9 @@ kubectl -n perses-operator-system create secret tls perses-operator-webhook-serv
      --cert=/tmp/k8s-webhook-server/serving-certs/tls.crt \
      --key=/tmp/k8s-webhook-server/serving-certs/tls.key
 ```
-- `make deploy`  
+- `make deploy`
+
+But then, applying the examples, this is not working. 
 
 ### 2. Create the `istio` namespace
 

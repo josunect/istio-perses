@@ -25,6 +25,7 @@ For troubleshootint:
 - Verify that the pods are ready in the `perses-operator-system` namespace
 - View manager pod logs 
 
+Note: V2 can be installed with `make deploy-local`, or installing the certificates first, but still, the resources are not created. 
 
 ### 2. Create the `istio` namespace
 

@@ -11,6 +11,7 @@ This repository contains ready-to-use dashboards for [Perses](https://perses.dev
 - `kubectl` configured to access your cluster.
 - [Prometheus](https://prometheus.io/) deployed and scraping Istio metrics.
 - Istio is installed in the `istio-system` namespace.
+- Tested with Perses 0.50.3
 
 ## Installation
 

@@ -57,7 +57,7 @@ kubectl create namespace istio
 Inside this repository you will find the dashboards in the `dashboards/` directory. To deploy them, run:
 
 ```sh
-kubectl apply -n istio -f dashboards/istio-dashboards.yml
+kubectl apply -n istio -f istio-dashboards.yml
 ```
 
 This will create the dashboards and datasources needed to visualize Istio metrics in Perses.

@@ -2,6 +2,9 @@
 
 This repository contains ready-to-use dashboards for [Perses](https://perses.dev/), designed to monitor Istio on Kubernetes. It allows you to deploy dashboards as native Kubernetes resources, making Istio observability easy with customizable, code-managed panels.
 
+![image](https://github.com/user-attachments/assets/e5e624a0-0e0f-4f12-82ee-783d6bea99b7)
+
+
 ## Prerequisites
 
 - A running Kubernetes cluster.

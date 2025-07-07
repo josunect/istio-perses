@@ -948,6 +948,13 @@ spec:
             height: 5
             content:
               $ref: "#/spec/panels/requests5xx"
+    - kind: Grid
+      spec:
+        display:
+          title: Global Traffic
+          collapse:
+            open: true
+        items:              
           - x: 0
             y: 21
             width: 24

@@ -1,0 +1,17 @@
+apiVersion: perses.dev/v1alpha1
+kind: PersesDatasource
+metadata:
+  name: thanos-querier-datasource
+  namespace: istio-system
+spec:
+  config:
+    display:
+      name: "Prom istio Datasource"
+    default: true
+    plugin:
+      kind: "PrometheusDatasource"
+      spec:
+        proxy:
+          kind: HTTPProxy
+          spec:
+            url: http://prometheus.istio-system:9090

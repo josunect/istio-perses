@@ -58,8 +58,7 @@ kubectl create namespace istio
 Create the perses resource: 
 
 ```sh
-kubectl create namespace istio
-kubectl apply -n istio -f perses.yaml
+kubectl apply -f perses.yaml
 ```
 
 Inside this repository you will find the dashboards in the `dashboards/` directory. To deploy them, run:

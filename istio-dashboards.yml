@@ -150,7 +150,7 @@ spec:
                 spec:
                   datasource:
                     kind: PrometheusDatasource
-                    name: $datasource
+                    name: prometheus
                   query: sum by (pod)
                     (rate(go_memstats_mallocs_total{app="istiod"}[$__rate_interval]))
                   seriesNameFormat: Objects ({{pod}})
@@ -276,7 +276,7 @@ spec:
                 spec:
                   datasource:
                     kind: PrometheusDatasource
-                    name: $datasource
+                    name: prometheus
                   query: sum by (type,event) (rate(pilot_k8s_cfg_events[$__rate_interval]))
                   seriesNameFormat: "{{event}} {{type}}"
           - kind: TimeSeriesQuery
@@ -322,7 +322,7 @@ spec:
                 spec:
                   datasource:
                     kind: PrometheusDatasource
-                    name: $datasource
+                    name: prometheus
                   query: sum (pilot_xds)
                   seriesNameFormat: Connections (server reported)
     pusherrors:
@@ -1679,23 +1679,6 @@ spec:
             height: 7
             content:
               $ref: "#/spec/panels/istiod_goroutines"
-  variables:
-    - kind: ListVariable
-      spec:
-        display:
-          hidden: false
-        defaultValue: PBFA97CFB590B2093
-        allowAllValue: false
-        allowMultiple: false
-        plugin:
-          kind: StaticListVariable
-          spec:
-            values:
-              - grafana
-              - migration
-              - not
-              - supported
-        name: datasource
   duration: 1h
   refreshInterval: 0s
 ---
@@ -6401,22 +6384,5 @@ spec:
             height: 8
             content:
               $ref: "#/spec/panels/workloadmanager"
-  variables:
-    - kind: ListVariable
-      spec:
-        display:
-          hidden: false
-        defaultValue: PBFA97CFB590B2093
-        allowAllValue: false
-        allowMultiple: false
-        plugin:
-          kind: StaticListVariable
-          spec:
-            values:
-              - grafana
-              - migration
-              - not
-              - supported
-        name: datasource
   duration: 1h
   refreshInterval: 0s

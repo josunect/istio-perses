@@ -18,7 +18,7 @@ metadata:
     app: perses
 data:
   project-default.json: |
-    {"kind": "Project","metadata": {"name": "istio"}}
+    {"kind": "Project","metadata": {"name": "istio"},"spec": {"display": {"name": "Istio"}}}
   datasource.json: |
     {"kind": "Datasource","metadata":{"name": "prometheus","project": "istio"},"spec": {"display": {"name": "Prometheus Main"},"default": true,"plugin": {"kind": "PrometheusDatasource","spec": {"proxy": {"kind": "HTTPProxy","spec": {"url": "http://prometheus.istio-system:9090",}}}}}}  
   dashboard-cp.json: |

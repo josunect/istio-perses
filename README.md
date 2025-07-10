@@ -4,6 +4,14 @@ This repository contains ready-to-use dashboards for [Perses](https://perses.dev
 
 ![image](https://github.com/user-attachments/assets/e5e624a0-0e0f-4f12-82ee-783d6bea99b7)
 
+There are different deployment methods: 
+- Using the Operator
+- With helm charts
+- As an addon with provisioned resources
+
+The easiest way is using the addon: 
+
+`kubectl apply -f https://raw.githubusercontent.com/josunect/istio-perses/refs/heads/main/addon/perses.yaml`
 
 ## Prerequisites
 

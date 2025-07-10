@@ -25,7 +25,7 @@ You can install the Perses Operator following the official documentation, for ex
 
 This will install the operator and the required CRDs in your cluster.
 
-For troubleshootint:
+For troubleshooting:
 - Verify that the pods are ready in the `perses-operator-system` namespace
 - View manager pod logs 
 

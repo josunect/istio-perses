@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: perses
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: perses
+  template:
+    metadata:
+      labels:
+        app: perses
+    spec:
+      containers:
+        - name: perses
+          image: persesdev/perses:latest
+          args:
+            - --log.level=debug
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PERSES_PROVISIONING_INTERVAL
+              value: "1m"
+          volumeMounts:
+            - name: provisioning
+              mountPath: /etc/perses/provisioning
+      volumes:
+        - name: provisioning
+          configMap:
+            name: perses-provisioning
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug
+spec:
+  containers:
+    - name: debug
+      image: busybox
+      command: ["sleep", "3600"]
+      volumeMounts:
+        - name: provisioning
+          mountPath: /etc/perses/provisioning
+  volumes:
+    - name: provisioning
+      configMap:
+        name: perses-provisioning

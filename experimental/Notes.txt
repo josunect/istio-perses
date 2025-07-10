@@ -1,0 +1,6 @@
+Note: 
+
+This creates a deployment/service in default namespace. 
+- Provisioning doesn't works. 
+- log level works
+- provisioning change works as well 

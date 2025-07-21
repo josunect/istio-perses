@@ -9,6 +9,20 @@ There are different deployment methods:
 - With helm charts
 - As an addon with provisioned resources
 
+## Prerequisites
+
+Istio needs to be 
+
+## Installation
+
 The easiest way is using the addon: 
 
 `kubectl apply -f https://raw.githubusercontent.com/josunect/istio-perses/refs/heads/main/addon/perses.yaml`
+
+Port forward the perses service: 
+
+`kubectl port-forward svc/perses 9080:80`
+
+And access to the server: 
+
+`http://localhost:9080/`

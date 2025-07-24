@@ -21,7 +21,7 @@ The easiest way is using the addon:
 
 Port forward the perses service: 
 
-`kubectl port-forward svc/perses 9080:80`
+`kubectl port-forward svc/perses 4000:4000`
 
 And access to the server: 
 

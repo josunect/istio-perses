@@ -81,6 +81,6 @@ spec:
     app: perses
   ports:
     - protocol: TCP
-      port: 80
+      port: 4000
       targetPort: 8080
 

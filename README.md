@@ -11,7 +11,7 @@ There are different deployment methods:
 
 ## Prerequisites
 
-Istio needs to be 
+Istio needs to be installed in the cluster, as well as the required dependency Prometheus.
 
 ## Installation
 
